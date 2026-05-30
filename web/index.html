@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>readlevel — check your writing's reading level, locally</title>
+    <meta
+      name="description"
+      content="Paste your text to instantly see its reading level — Flesch reading ease, grade level, reading time, word/sentence/syllable counts and keyword density. 100% local, nothing uploaded. Write so everyone can read."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>📖 readlevel</h1>
+      <p class="tagline">
+        See your writing's <strong>reading level</strong> as you type — grade,
+        reading time, and what's making it hard.
+      </p>
+      <p class="privacy">🔒 100% local — your text never leaves your browser.</p>
+    </header>
+
+    <main>
+      <div class="grid">
+        <section class="editor">
+          <div class="editor-head">
+            <span>Your text</span>
+            <button id="sample" type="button">Load sample</button>
+          </div>
+          <textarea id="input" placeholder="Paste or write here…" spellcheck="false"></textarea>
+        </section>
+
+        <section class="panel">
+          <div class="hero-stat">
+            <div class="grade" id="grade">—</div>
+            <div class="grade-label" id="gradeLabel">Grade level</div>
+            <div class="ease" id="ease"></div>
+          </div>
+
+          <div class="counts" id="counts"></div>
+
+          <h3>Readability formulas</h3>
+          <div class="scores" id="scores"></div>
+
+          <h3>Top keywords</h3>
+          <div class="keywords" id="keywords"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://github.com/didrod205/readlevel">GitHub</a> ·
+      <a href="https://www.npmjs.com/package/readlevel">npm</a> ·
+      <span>MIT</span> · <span>Zero dependencies</span>
+    </footer>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

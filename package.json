@@ -1,0 +1,64 @@
+{
+  "name": "readlevel",
+  "version": "0.1.0",
+  "description": "Measure how hard your writing is to read — Flesch reading ease, Flesch–Kincaid grade, Gunning Fog, SMOG & more, plus word/sentence/syllable counts, reading time and keyword density. Zero dependencies, 100% local.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:web": "vite build",
+    "dev": "vite",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "readability",
+    "flesch",
+    "flesch-kincaid",
+    "reading-level",
+    "reading-time",
+    "text-statistics",
+    "word-count",
+    "syllables",
+    "keyword-density",
+    "gunning-fog",
+    "smog",
+    "writing",
+    "zero-dependency"
+  ],
+  "author": "didrod205 (https://github.com/didrod205)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didrod205/readlevel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/didrod205/readlevel/issues"
+  },
+  "homepage": "https://didrod205.github.io/readlevel/",
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0",
+    "vitest": "^2.1.8"
+  }
+}

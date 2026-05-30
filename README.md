@@ -4,11 +4,11 @@
 
 ### Measure how hard your writing is to read — instantly, and locally.
 
-[![npm version](https://img.shields.io/npm/v/readlevel.svg?color=success)](https://www.npmjs.com/package/readlevel)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/readlevel?label=gzip)](https://bundlephobia.com/package/readlevel)
+[![npm version](https://img.shields.io/npm/v/@didrod2539/readlevel.svg?color=success)](https://www.npmjs.com/package/@didrod2539/readlevel)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@didrod2539/readlevel?label=gzip)](https://bundlephobia.com/package/@didrod2539/readlevel)
 [![CI](https://github.com/didrod205/readlevel/actions/workflows/ci.yml/badge.svg)](https://github.com/didrod205/readlevel/actions/workflows/ci.yml)
-[![types](https://img.shields.io/npm/types/readlevel.svg)](https://www.npmjs.com/package/readlevel)
-[![license](https://img.shields.io/npm/l/readlevel.svg)](./LICENSE)
+[![types](https://img.shields.io/npm/types/@didrod2539/readlevel.svg)](https://www.npmjs.com/package/@didrod2539/readlevel)
+[![license](https://img.shields.io/npm/l/@didrod2539/readlevel.svg)](./LICENSE)
 
 **[🌐 Try the free web app →](https://didrod205.github.io/readlevel/)** &nbsp;·&nbsp; paste your text, see its reading level as you type. Nothing uploaded.
 
@@ -55,15 +55,18 @@ text in an app or CI.
 For the library:
 
 ```bash
-npm install readlevel
+npm install @didrod2539/readlevel
 ```
+
+> Published on npm under the `@didrod2539` scope (`@didrod2539/readlevel`). The
+> import name matches the package name; everything else is identical.
 
 Zero dependencies. ESM + CJS + TypeScript types. Runs in the browser, Node, Deno and Bun.
 
 ## Usage
 
 ```ts
-import { analyze } from "readlevel";
+import { analyze } from "@didrod2539/readlevel";
 
 const a = analyze("The cat sat on the mat.");
 a.grade;        // ~0–1
@@ -79,7 +82,7 @@ a.syllables;    // 6
 ### Keyword density (for SEO / editing)
 
 ```ts
-import { keywordDensity } from "readlevel";
+import { keywordDensity } from "@didrod2539/readlevel";
 
 keywordDensity("Marketing is great. Great marketing wins. Marketing wins.", { top: 3 });
 // [{ word: "marketing", count: 3, percent: 30 }, { word: "wins", count: 2, percent: 20 }, …]
@@ -88,7 +91,7 @@ keywordDensity("Marketing is great. Great marketing wins. Marketing wins.", { to
 ### Other helpers
 
 ```ts
-import { readingTime, countSyllables, longestSentences } from "readlevel";
+import { readingTime, countSyllables, longestSentences } from "@didrod2539/readlevel";
 
 readingTime(text, 200);        // seconds at 200 wpm
 countSyllables("readability"); // 5

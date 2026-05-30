@@ -1,6 +1,9 @@
 {
-  "name": "readlevel",
+  "name": "@didrod2539/readlevel",
   "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Measure how hard your writing is to read — Flesch reading ease, Flesch–Kincaid grade, Gunning Fog, SMOG & more, plus word/sentence/syllable counts, reading time and keyword density. Zero dependencies, 100% local.",
   "type": "module",
   "main": "./dist/index.js",

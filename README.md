@@ -52,7 +52,15 @@ text in an app or CI.
 
 **No install —** just open the **[web app](https://didrod205.github.io/readlevel/)**.
 
-For the library:
+**Command line:**
+
+```bash
+npx @didrod2539/readlevel article.md       # readability report
+cat README.md | npx @didrod2539/readlevel  # works as a filter
+npx @didrod2539/readlevel post.md --max-grade 9   # exit 1 if too hard (CI gate)
+```
+
+**Library:**
 
 ```bash
 npm install @didrod2539/readlevel
@@ -62,6 +70,16 @@ npm install @didrod2539/readlevel
 > import name matches the package name; everything else is identical.
 
 Zero dependencies. ESM + CJS + TypeScript types. Runs in the browser, Node, Deno and Bun.
+
+## CLI
+
+```bash
+readlevel [file]          # report on a file, or pipe stdin
+readlevel post.md --json  # full analysis as JSON
+```
+
+Options: `--json`, `--keywords`, `--long`, `--max-grade <n>` (exit 1 if the text
+is harder than grade `n` — a CI gate for docs/marketing copy).
 
 ## Usage
 
